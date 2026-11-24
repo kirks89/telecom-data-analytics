@@ -1,0 +1,20 @@
+# Generated data (large and reproducible) - README_DATA.md is still committed
+data/raw/*.csv
+data/raw/*.zip
+data/ground_truth/
+
+# Sealed generator package: never commit before Week 5
+*SEALED*
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Power BI / editors / OS
+*.pbix.bak
+.vscode/
+.idea/
+.dbeaver/
+Thumbs.db
+.DS_Store
