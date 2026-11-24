@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS bronze.site_inventory (
     longitude        VARCHAR(50),
     commission_date  VARCHAR(50),
     -- load metadata
-    load_ts          DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    load_ts  DATETIME(6)  NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
     source_file      VARCHAR(255) NOT NULL
 );
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS bronze.kpi_counters_hourly (
     prb_util_pct        VARCHAR(50),
     avail_seconds       VARCHAR(50),
     -- load metadata
-    load_ts             DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    load_ts  DATETIME(6)  NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
     source_file         VARCHAR(255) NOT NULL
 );
 
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS bronze.alarms_log (
     alarm_text   VARCHAR(255),
     severity     VARCHAR(50),
     -- load metadata
-    load_ts      DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    load_ts  DATETIME(6)  NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
     source_file  VARCHAR(255) NOT NULL
 );
 
@@ -64,6 +64,6 @@ CREATE TABLE IF NOT EXISTS bronze.incidents (
     root_cause   VARCHAR(255),
     priority     VARCHAR(50),
     -- load metadata
-    load_ts      DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    load_ts  DATETIME(6)  NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
     source_file  VARCHAR(255) NOT NULL
 );
